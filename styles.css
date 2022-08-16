@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+body {
+	display: flex;
+	flex-direction: row;
+}
+
 #side-hero {
   background: url(waterfall.jpg) right center fixed;
   -webkit-background-size: cover;
@@ -17,7 +22,7 @@
 .hero-container {
   display: flex;
   height: 30vh;
-  width: inherit;
+  width: 100%;
   position: absolute;
   top: 30vh;
   justify-content: center;
@@ -41,6 +46,18 @@
   bottom: 10px;
   right: 10px;
   font-size: 0.8em;
+}
+
+form {
+	border: 1px solid green;
+	padding: 1rem;
+}
+
+button {
+	background-color: #389198;
+	width: 12rem;
+	height: 2rem;
+	border-radius: .5rem;
 }
 
 @media only screen and (max-width: 768px) {
