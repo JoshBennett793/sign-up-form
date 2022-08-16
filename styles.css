@@ -1,63 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-	display: flex;
-	flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  font-family: "Roboto", Tahoma, sans-serif;
 }
 
-#side-hero {
+#side-hero-container {
   background: url(waterfall.jpg) right center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   position: relative;
-  width: 35vw;
+  width: 75vw;
   height: 100vh;
 }
 
-.hero-container {
+.hero-banner {
   display: flex;
   height: 30vh;
   width: 100%;
-  position: absolute;
-  top: 30vh;
+  margin-top: 30vh;
+	padding-right: auto;
+	padding-left: auto;
   justify-content: center;
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.hero-container > * {
+.hero-banner > * {
   align-self: center;
   justify-content: center;
   margin: 0 1.5rem 0 1.5rem;
   font-size: 2.3rem;
 }
 
-.hero-container img {
-  height: inherit;
+.hero-banner img {
+  height: 80%;
 }
 
-#side-hero .img-credit {
+#side-hero-container .img-credit {
   position: absolute;
+	color: white;
   bottom: 10px;
   right: 10px;
   font-size: 0.8em;
 }
 
+a {
+	color: rgb(45, 181, 226);
+}
+
 form {
-	border: 1px solid green;
-	padding: 1rem;
+  padding: 2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input {
+  height: 1.7rem;
+	width: 100%;
+  border: 1px solid #e1e2e4;
+  border-radius: 0.3rem;
+}
+
+
+.sec-1 {
+	margin: 10vh 0 1.3rem 0;
+}
+
+.sec-1 p {
+	margin-bottom: 2.5rem;
+}
+
+.sec-2 {
+  flex-wrap: wrap;
+}
+
+.sec-3 {
+	padding-top: 2rem;
+}
+
+fieldset {
+	border: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+	margin-top: .3rem;
+}
+
+fieldset > div {
+	float: left;
+	margin-right: 1rem;
+	margin-bottom: 1rem;
+}
+
+field-set label {
+  margin-bottom: 10px;
 }
 
 button {
-	background-color: #389198;
-	width: 12rem;
-	height: 2rem;
-	border-radius: .5rem;
+  background-color: #389198;
+  width: 12rem;
+  height: 2.5rem;
+	border: 0;
+	box-shadow: 2px 2px 4px grey;
+  border-radius: 0.5rem;
+	margin-bottom: 1rem;
 }
 
 @media only screen and (max-width: 768px) {
@@ -67,7 +122,7 @@ button {
     justify-content: center;
   }
 
-  #side-hero {
+  #side-hero-container {
     display: flex;
     position: relative;
     top: 0;
@@ -75,9 +130,39 @@ button {
     height: 50vh;
   }
 
-  .hero-container {
+  .hero-banner {
     postion: absolute;
-    top: 4rem;
+    top: 6rem;
     height: 6rem;
   }
+
+	form {
+		position: absolute;
+		top: 37vh;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.sec-1 {
+		text-align: center;
+	}
+
+	.sec-2 p {
+		text-align: center;
+	}
+
+	.sec-2 > p {
+		margin-bottom: 3rem;
+	}
+
+	fieldset > div {
+		width: 60%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.sec-3 {
+		text-align: center;
+	}
+
 }
